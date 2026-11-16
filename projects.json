@@ -1,0 +1,104 @@
+{
+  "owner": "jachbit",
+  "updated": "2026-11-15",
+  "categories": [
+    "Trading Tools",
+    "Trading References",
+    "Everyday Tools",
+    "Community",
+    "Wellness"
+  ],
+  "projects": [
+    {
+      "repo": "FOCUS-Market-Pulse",
+      "title": "Market Pulse",
+      "category": "Trading Tools",
+      "description": "Sector Rotation, Seasonality and Market Weather from the Edge Scanner's math. Data refreshes on its own every market hour.",
+      "site": "https://jachbit.github.io/FOCUS-Market-Pulse/"
+    },
+    {
+      "repo": "FFTP",
+      "title": "Futures Trade Projections",
+      "category": "Trading Tools",
+      "description": "Capital doubling and contract scaling plan for futures accounts, with a printable user guide.",
+      "site": "https://jachbit.github.io/FFTP/"
+    },
+    {
+      "repo": "FMS",
+      "title": "Market Secrets Simulator",
+      "category": "Trading Tools",
+      "description": "The Unwritten Rule: a Hold / Add / Sell ladder simulator.",
+      "site": "https://jachbit.github.io/FMS/"
+    },
+    {
+      "repo": "FOCUS-GB",
+      "title": "GB Algo",
+      "category": "Trading Tools",
+      "description": "Goldbach time and algo path, futures edition: Zurich / New York node clock with alerts and the bullish / bearish path guide.",
+      "site": "https://jachbit.github.io/FOCUS-GB/"
+    },
+    {
+      "repo": "focus-traders-em",
+      "title": "Traders Weekly EM",
+      "category": "Trading Tools",
+      "description": "Weekly expected moves for 30+ tickers. Runs locally with its own small server, so it has no online page.",
+      "site": null
+    },
+    {
+      "repo": "frwl",
+      "title": "Research Watchlist",
+      "category": "Trading Tools",
+      "description": "Personal stock research watchlist (Flask app). Runs locally, so it has no online page.",
+      "site": null
+    },
+    {
+      "repo": "FOCUS-GEX-Layout",
+      "title": "GEX Layout",
+      "category": "Trading References",
+      "description": "One-page reference for the seven GEX layouts (A-G): gamma flip vs call wall and put wall, what to look for, what to avoid.",
+      "site": "https://jachbit.github.io/FOCUS-GEX-Layout/"
+    },
+    {
+      "repo": "FSB",
+      "title": "Stocks Banner Lite",
+      "category": "Trading References",
+      "description": "Full-screen F.O.C.U.S. stocks banner. Can be installed on a phone as an app.",
+      "site": "https://jachbit.github.io/FSB/"
+    },
+    {
+      "repo": "FOCUS-Clock",
+      "title": "Talking Clock",
+      "category": "Everyday Tools",
+      "description": "Eastern Time clock with the market session and countdown, world clocks, alarms and a spoken time.",
+      "site": "https://jachbit.github.io/FOCUS-Clock/"
+    },
+    {
+      "repo": "FCS",
+      "title": "Car Schedule",
+      "category": "Everyday Tools",
+      "description": "Car schedule log: dated entries with logged hours, a calendar view, blank calendar PDF sheets and CSV import / export.",
+      "site": "https://jachbit.github.io/FCS/"
+    },
+    {
+      "repo": "FSL",
+      "title": "To-Buy List",
+      "category": "Everyday Tools",
+      "description": "Shopping list: add items with price and quantity, and the running total updates as you go.",
+      "site": "https://jachbit.github.io/FSL/"
+    },
+    {
+      "repo": "fbc",
+      "title": "Batch Connect",
+      "category": "Community",
+      "description": "Batchmates central ledger: schools, member roster, events and reunions calendar, with PDF and CSV export.",
+      "site": "https://jachbit.github.io/fbc/"
+    },
+    {
+      "repo": "focus_trader_wellness",
+      "title": "Trader Wellness",
+      "category": "Wellness",
+      "description": "Tai Chi and eye care guide for long screen days.",
+      "site": "https://jachbit.github.io/focus_trader_wellness/focus_trader_wellness.html"
+    }
+  ]
+}

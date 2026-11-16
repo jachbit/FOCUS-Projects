@@ -1,0 +1,9 @@
+# generated PDFs (timestamped, made on the PC) and local backups
+*.pdf
+backups/
+__pycache__/
+# credentials never belong here (no-secret project), but just in case
+.env
+*.token
+schwab_token.json
+tastytrade_token.json
