@@ -1,5 +1,6 @@
 # generated PDFs (timestamped, made on the PC) and local backups
 *.pdf
+!data/FOCUS_Projects_latest.pdf
 backups/
 __pycache__/
 # credentials never belong here (no-secret project), but just in case

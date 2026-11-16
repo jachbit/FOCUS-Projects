@@ -1,0 +1,43 @@
+name: Projects PDF
+
+# Rebuilds data/FOCUS_Projects_latest.pdf (F.O.C.U.S. PDF template) when the list or the script
+# changes, once a day so the "updated" dates stay current, and by hand (Run workflow).
+on:
+  push:
+    branches: [main]
+    paths: ["projects.json", "build_projects_pdf.py", ".github/workflows/pdf.yml"]
+  schedule:
+    - cron: "15 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: projects-pdf
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install reportlab
+      - name: Build the PDF
+        run: python build_projects_pdf.py --latest
+      - name: Save the PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/FOCUS_Projects_latest.pdf
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -m "Projects PDF $(date '+%Y-%m-%d %H:%M') ET"
+          git pull --rebase
+          git push

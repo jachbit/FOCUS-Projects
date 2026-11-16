@@ -290,10 +290,22 @@
   });
   $('search').addEventListener('input', e => { q = e.target.value; render(); });
 
-  // ── PDF: browser print with a timestamped file name and a subtitle saying what is in it ──
-  $('btn-pdf').addEventListener('click', () => {
+  // ── PDF: the F.O.C.U.S. template PDF that GitHub builds (build_projects_pdf.py --latest, all projects),
+  //    saved with a timestamped name; browser print of the screen only if that file is missing ──
+  $('btn-pdf').addEventListener('click', async () => {
     const d = new Date(), z = n => String(n).padStart(2, '0');
     const stamp = `${d.getFullYear()}${z(d.getMonth() + 1)}${z(d.getDate())}_${z(d.getHours())}${z(d.getMinutes())}${z(d.getSeconds())}`;
+    try {
+      const res = await fetch('data/FOCUS_Projects_latest.pdf', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(await res.blob());
+      a.download = `FOCUS_Projects_${stamp}.pdf`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+      if (cat !== 'All' || q.trim()) showStatus('The PDF lists all projects (the filter / search above only changes the page).');
+      return;
+    } catch (e) { /* no template PDF yet: print the screen instead */ }
     setByline(visible().length);
     const old = document.title;
     document.title = `FOCUS_Projects_${stamp}`;

@@ -10,5 +10,6 @@ copy "build_projects_pdf.py" "backups\build_projects_pdf_%TS%.py" >nul && echo  
 copy "README.md"             "backups\README_%TS%.md" >nul && echo   [OK] README.md
 copy "start.bat"             "backups\start_%TS%.bat" >nul && echo   [OK] start.bat
 copy "make_pdf.bat"          "backups\make_pdf_%TS%.bat" >nul && echo   [OK] make_pdf.bat
+copy ".github\workflows\pdf.yml" "backups\pdf_%TS%.yml" >nul && echo   [OK] pdf.yml
 echo.
 echo Backup done: backups\*_%TS%.*

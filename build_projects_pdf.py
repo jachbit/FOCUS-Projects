@@ -258,10 +258,15 @@ def link(url):
     return f'<link href="{u}" color="#1a59a6">{u}</link>'
 
 # ── Build Function ────────────────────────────────────────────────────────────
-def build():
+def build(latest=False):
+    """latest=True (GitHub Action): data/FOCUS_Projects_latest.pdf, which the page's Save PDF button downloads."""
     owner, cats, projects = load_projects()
     ts  = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out = os.path.join(HERE, f"FOCUS_Projects_GitHub_{ts}.pdf")
+    if latest:
+        os.makedirs(os.path.join(HERE, "data"), exist_ok=True)
+        out = os.path.join(HERE, "data", "FOCUS_Projects_latest.pdf")
+    else:
+        out = os.path.join(HERE, f"FOCUS_Projects_GitHub_{ts}.pdf")
 
     doc = SimpleDocTemplate(
         out,
@@ -323,4 +328,5 @@ def build():
     print(f"PDF generated: {out}")
 
 if __name__ == "__main__":
-    build()
+    import sys
+    build(latest="--latest" in sys.argv)
