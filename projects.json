@@ -48,8 +48,8 @@
       "repo": "frwl",
       "title": "Research Watchlist",
       "category": "Trading Tools",
-      "description": "Personal stock research watchlist (Flask app). Runs locally, so it has no online page.",
-      "site": null
+      "description": "Research Watchlist LITE: personal stock research watchlist with yFinance prices and fundamentals, groups, notes, alarms and CSV / PDF export. Hosted on Render's free plan, so the first open after a quiet spell can take up to a minute while it wakes up.",
+      "site": "https://frwl.onrender.com/"
     },
     {
       "repo": "FOCUS-GEX-Layout",
