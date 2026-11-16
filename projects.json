@@ -1,6 +1,6 @@
 {
   "owner": "jachbit",
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "categories": [
     "Trading Tools",
     "Trading References",
@@ -43,6 +43,13 @@
       "category": "Trading Tools",
       "description": "Weekly expected moves (EM = Spot x ATM IV x sqrt(DTE/365), +MMM on earnings weeks) with Friday close and EM low / high. Online numbers come from yFinance every market hour; start_server.bat on the PC gives live numbers.",
       "site": "https://jachbit.github.io/focus-traders-em/"
+    },
+    {
+      "repo": "FOCUS-MMM-WEB",
+      "title": "MMM - Options Cone Simulator",
+      "category": "Trading Tools",
+      "description": "Expected-move cone for Cash-Secured Puts, Covered Calls, Buy Calls and Buy Puts: type the numbers (or Get price from Yahoo) and read EM, chance ITM / touch / profit, reach date, break-even, returns, option values, NOW odds and live P/L, each with its worked math. Saved plays, CSV and PDF report. Same math as the TOS MMM studies.",
+      "site": "https://jachbit.github.io/FOCUS-MMM-WEB/"
     },
     {
       "repo": "frwl",
