@@ -41,8 +41,8 @@
       "repo": "focus-traders-em",
       "title": "Traders Weekly EM",
       "category": "Trading Tools",
-      "description": "Weekly expected moves for 30+ tickers. Runs locally with its own small server, so it has no online page.",
-      "site": null
+      "description": "Weekly expected moves (EM = Spot x ATM IV x sqrt(DTE/365), +MMM on earnings weeks) with Friday close and EM low / high. Online numbers come from yFinance every market hour; start_server.bat on the PC gives live numbers.",
+      "site": "https://jachbit.github.io/focus-traders-em/"
     },
     {
       "repo": "frwl",
