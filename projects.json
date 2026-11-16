@@ -55,7 +55,7 @@
       "repo": "FOCUS-GEX-Layout",
       "title": "GEX Layout",
       "category": "Trading References",
-      "description": "One-page reference for the seven GEX layouts (A-G): gamma flip vs call wall and put wall, what to look for, what to avoid.",
+      "description": "One-page reference for the seven GEX layouts (A-G): gamma flip vs call wall and put wall, what to look for, what to avoid. Layout checker with the worked math, EM left (0DTE expected move still left to 16:00 ET) vs the walls, PDF.",
       "site": "https://jachbit.github.io/FOCUS-GEX-Layout/"
     },
     {
