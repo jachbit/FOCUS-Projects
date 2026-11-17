@@ -48,7 +48,7 @@
       "repo": "FOCUS-MMM-WEB",
       "title": "MMM - Options Cone Simulator",
       "category": "Trading Tools",
-      "description": "Expected-move cone for Cash-Secured Puts, Covered Calls, Buy Calls and Buy Puts: type the numbers and read EM, chance ITM / touch / profit, reach date, break-even, returns, option values and NOW odds, each with its worked math. Get price fills the stock price, the next earnings date and the option's bid / ask / last. Big P/L monitor at the top (Covered Call: stock + call total, if called / not called, cost after premium). Saved plays, CSV and PDF report. Same math as the TOS MMM studies.",
+      "description": "Expected-move cone for Cash-Secured Puts, Covered Calls, Buy Calls and Buy Puts: type the numbers and read EM, chance ITM / touch / profit, reach date, break-even, returns, option values and NOW odds, each with its worked math. Get price fills the stock price, the next earnings date and the option's bid / ask / last. Big P/L monitor at the top (Covered Call: stock + call total, if called / not called, cost after premium). Saved plays, CSV and PDF report. User Guide (PDF) button in the header opens the full guide with worked examples. Same math as the TOS MMM studies.",
       "site": "https://jachbit.github.io/FOCUS-MMM-WEB/"
     },
     {
