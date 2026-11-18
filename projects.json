@@ -1,6 +1,6 @@
 {
   "owner": "jachbit",
-  "updated": "2026-11-16",
+  "updated": "2026-11-18",
   "categories": [
     "Trading Tools",
     "Trading References",
@@ -50,6 +50,13 @@
       "category": "Trading Tools",
       "description": "Expected-move cone for Cash-Secured Puts, Covered Calls, Buy Calls and Buy Puts: type the numbers and read EM, chance ITM / touch / profit, reach date, break-even, returns, option values and NOW odds, each with its worked math. Get price fills the stock price, the next earnings date and the option's bid / ask / last. Big P/L monitor at the top (Covered Call: stock + call total, if called / not called, cost after premium). Saved plays, CSV and PDF report. User Guide (PDF) button in the header opens the full guide with worked examples. Same math as the TOS MMM studies.",
       "site": "https://jachbit.github.io/FOCUS-MMM-WEB/"
+    },
+    {
+      "repo": "FOCUS-TRADE-SUMMARY",
+      "title": "Options & Stocks Trade Summary",
+      "category": "Trading Tools",
+      "description": "Import a Schwab account statement CSV and get a big options P/L (realized + open) with win rate at the top, every closed trade matched FIFO with its worked math, open positions, P/L by underlying (checked against Schwab's P/L YTD), by strategy and by month, dividends and stock sales. Several accounts, period filter, CSV / PDF report and backup. Data stays in your browser.",
+      "site": "https://jachbit.github.io/FOCUS-TRADE-SUMMARY/"
     },
     {
       "repo": "frwl",
