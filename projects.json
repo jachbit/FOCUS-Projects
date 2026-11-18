@@ -55,7 +55,7 @@
       "repo": "FOCUS-TRADE-SUMMARY",
       "title": "Options & Stocks Trade Summary",
       "category": "Trading Tools",
-      "description": "Import a Schwab account statement CSV and get a big options P/L (realized + open) with win rate at the top, every closed trade matched FIFO with its worked math, open positions, P/L by underlying (checked against Schwab's P/L YTD), by strategy and by month, dividends and stock sales. Options-only and Stocks-only views. Several accounts, period filter, CSV / PDF report and backup. Data stays in your browser.",
+      "description": "Import a Schwab account statement CSV and get a big options P/L (realized + open) with win rate at the top, every closed trade matched FIFO with its worked math, cash-secured put return (premium kept and received as % of the CSP value), open positions, P/L by underlying (checked against Schwab's P/L YTD), by strategy and by month, dividends and stock sales. Options-only and Stocks-only views. Several accounts, period filter, CSV / PDF report and backup. Data stays in your browser.",
       "site": "https://jachbit.github.io/FOCUS-TRADE-SUMMARY/"
     },
     {
