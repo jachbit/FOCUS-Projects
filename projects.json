@@ -113,6 +113,13 @@
       "category": "Wellness",
       "description": "Tai Chi and eye care guide for long screen days.",
       "site": "https://jachbit.github.io/focus_trader_wellness/focus_trader_wellness.html"
+    },
+    {
+      "repo": "FOCUS-OSOK-Statistics",
+      "title": "OSOK Statistics",
+      "category": "Trading Tools",
+      "description": "Results of the timed OSOK straddle on NinjaTrader 8: filter by 8:30 News / 9:30 NY Open / 18:00 Globex, No SL / With SL, paper / live and news release; every trade with its math, with PDF, CSV export and CSV import.",
+      "site": "https://jachbit.github.io/FOCUS-OSOK-Statistics/"
     }
   ]
 }
