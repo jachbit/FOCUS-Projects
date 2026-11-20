@@ -104,8 +104,9 @@
       "repo": "FOCUS-Backup",
       "title": "Backup",
       "category": "Everyday Tools",
-      "description": "Windows app: backs up a folder to an external disk. The first run copies everything, later runs only new and changed files. Download FOCUS-Backup.exe from the repo's Releases.",
-      "site": null
+      "description": "Windows app in its own window: backs up a folder to an external disk. The first run copies everything, later runs only new and changed files.",
+      "site": null,
+      "download": "https://github.com/jachbit/FOCUS-Backup/releases/latest"
     },
     {
       "repo": "fbc",

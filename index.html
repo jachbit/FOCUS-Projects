@@ -75,6 +75,7 @@
   .badge { font-size: 12px; font-weight: 800; padding: 1px 8px; border-radius: 999px; border: 1px solid; }
   .badge.live { color: var(--green); border-color: var(--green); }
   .badge.local { color: var(--yellow); border-color: var(--yellow); }
+  .badge.app { color: #60a5fa; border-color: #60a5fa; }
   .badge.new { color: var(--yellow); border-color: var(--yellow); }
   .links { display: flex; gap: 8px; flex-wrap: wrap; }
   .links .btn { font-size: 12px; padding: 5px 10px; }
@@ -125,6 +126,7 @@
     .badge { font-size: 8.5px; padding: 0 5px; }
     .badge.live { color: #0d6126; border-color: #0d6126; }
     .badge.local, .badge.new { color: #8c1a05; border-color: #8c1a05; }
+    .badge.app { color: #1a59a6; border-color: #1a59a6; }
     .print-url { display: block; font-size: 9px; color: #1a59a6; word-break: break-all; }
     .print-url a { color: #1a59a6; text-decoration: none; }
     .print-url b { color: #002b5c; }
@@ -251,16 +253,19 @@
 
   function card(p) {
     const status = p.isNew ? '<span class="badge new">New</span>'
-      : p.site ? '<span class="badge live">Live page</span>' : '<span class="badge local">Runs locally</span>';
-    const main = p.site || p.code;
+      : p.site ? '<span class="badge live">Live page</span>'
+      : p.download ? '<span class="badge app">Windows app</span>' : '<span class="badge local">Runs locally</span>';
+    const main = p.site || p.download || p.code;
     return `<div class="card${p.isNew ? ' new' : ''}">
       <h3><a href="${esc(main)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
       <div class="meta">${status}<span>repo: ${esc(p.repo)}</span>${p.lang ? `<span>${esc(p.lang)}</span>` : ''}${p.pushed ? `<span>updated ${fmtDate(p.pushed)}</span>` : ''}</div>
       <div class="desc">${esc(p.description)}</div>
       ${p.site ? `<div class="print-url"><b>Page:</b> <a href="${esc(p.site)}">${esc(p.site)}</a></div>` : ''}
+      ${p.download ? `<div class="print-url"><b>Download:</b> <a href="${esc(p.download)}">${esc(p.download)}</a></div>` : ''}
       <div class="print-url"><b>Code:</b> <a href="${esc(p.code)}">${esc(p.code)}</a></div>
       <div class="links">
         ${p.site ? `<a class="btn primary" href="${esc(p.site)}" target="_blank" rel="noopener">&#9654; Open page</a>` : ''}
+        ${p.download ? `<a class="btn primary" href="${esc(p.download)}" target="_blank" rel="noopener">&#11015; Download .exe</a>` : ''}
         <a class="btn" href="${esc(p.code)}" target="_blank" rel="noopener">&lt;/&gt; Code</a>
       </div>
     </div>`;
@@ -269,7 +274,9 @@
   function render() {
     const v = visible();
     const live = v.filter(p => p.site).length;
-    $('count').textContent = `${v.length} project${v.length === 1 ? '' : 's'} · ${live} with a live page`;
+    const dl = v.filter(p => p.download).length;
+    $('count').textContent = `${v.length} project${v.length === 1 ? '' : 's'} · ${live} with a live page` +
+      (dl ? ` · ${dl} download${dl === 1 ? '' : 's'}` : '');
     $('list').innerHTML = cats.map(c => {
       const items = v.filter(p => p.category === c);
       if (!items.length) return '';

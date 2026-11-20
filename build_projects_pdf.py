@@ -278,6 +278,8 @@ def build(latest=False):
     )
 
     live = sum(1 for p in projects if p.get("site"))
+    dl = sum(1 for p in projects if p.get("download"))
+    dl_txt = f", {dl} download{'s' if dl != 1 else ''}" if dl else ""
     story = []
 
     # ── Title Block ───────────────────────────────────────────────────────────
@@ -288,7 +290,7 @@ def build(latest=False):
     story.append(sp(6))
     story.append(Paragraph("Every public F.O.C.U.S. project on GitHub, with its live page and its code", CDATE_S))
     story.append(sp(4))
-    story.append(Paragraph(f"Jachbit 2026  ·  {NOW_STR}  ·  {len(projects)} projects ({live} with a live page)  ·  "
+    story.append(Paragraph(f"Jachbit 2026  ·  {NOW_STR}  ·  {len(projects)} projects ({live} with a live page{dl_txt})  ·  "
                            f"all categories  ·  github.com/{owner}", DISC_S))
     story.append(sp(4))
     story.append(Paragraph(f"Online version (always current): {link(f'https://{owner}.github.io/{SELF}/')}", 
@@ -306,6 +308,7 @@ def build(latest=False):
         rows = [[Paragraph("PROJECT", TH_S), Paragraph("WHAT IT IS  ·  LINKS", TH_S)]]
         for p in items:
             status = ("<font color='#0d6126'><b>Live page</b></font>" if p.get("site")
+                      else "<font color='#1a59a6'><b>Windows app</b></font>" if p.get("download")
                       else "<font color='#8c1a05'><b>Runs locally</b></font>")
             if c == NEW_CAT:
                 status = "<font color='#8c1a05'><b>New</b></font>"
@@ -315,6 +318,8 @@ def build(latest=False):
             right = [escape(p["description"])]
             if p.get("site"):
                 right.append(f"<b>Page:</b> {link(p['site'])}")
+            if p.get("download"):
+                right.append(f"<b>Download:</b> {link(p['download'])}")
             right.append(f"<b>Code:</b> {link(p['code'])}")
             rows.append([left, Paragraph("<br/>".join(right), TD_L)])
         t = Table(rows, colWidths=col_w, repeatRows=1)
