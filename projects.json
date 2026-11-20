@@ -1,6 +1,6 @@
 {
   "owner": "jachbit",
-  "updated": "2026-11-18",
+  "updated": "2026-11-20",
   "categories": [
     "Trading Tools",
     "Trading References",
@@ -99,6 +99,13 @@
       "category": "Everyday Tools",
       "description": "Shopping list: add items with price and quantity, and the running total updates as you go.",
       "site": "https://jachbit.github.io/FSL/"
+    },
+    {
+      "repo": "FOCUS-Backup",
+      "title": "Backup",
+      "category": "Everyday Tools",
+      "description": "Windows app: backs up a folder to an external disk. The first run copies everything, later runs only new and changed files. Download FOCUS-Backup.exe from the repo's Releases.",
+      "site": null
     },
     {
       "repo": "fbc",
